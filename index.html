@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .back {
+
+            position: fixed;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            animation-name: backdiv;
+            animation-duration: 3500ms;
+            animation-iteration-count: infinite;
+            height: 100vh;
+        }
+
+        .heart {
+            position: absolute;
+            margin: auto;
+            top: 170px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(184, 41, 141);
+            height: 150px;
+            width: 150px;
+            transform: rotate(-45deg);
+            animation-name: beat;
+            animation-duration: 3500ms;
+            animation-iteration-count: infinite;
+        }
+
+        .heart:after {
+            background-color: rgb(165, 28, 119);
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 0;
+            left: 80px;
+        }
+
+        .heart:before {
+            background-color: rgb(167, 22, 111);
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: -80px;
+            left: 0;
+        }
+
+        @keyframes backdiv {
+            50% {
+                background: #000000fd;
+            }
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1) rotate(-45deg);
+            }
+
+            50% {
+                transform: scale(0.6) rotate(-45deg);
+            }
+        }
+
+        .bday {
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(102, 101, 101, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            font-size: 15px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #570701;
+        }
+
+        button {
+            background-color: rgb(90, 6, 6);
+            display: block; 
+            margin: 20px auto; 
+            padding: 10px 20px; 
+            color: white; 
+            border: none;
+            margin-top: 70vh;
+             
+        }
+        a{
+            color: rgb(255, 255, 255);
+            font-weight: 20px;
+            text-decoration: none;
+        }
+
+        .elements {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <title>girafsol</title>
+</head>
+<body>
+    <div class="back">
+        <div class="bday">Amorequinho<br>7 meses togethers amoreco, nem parece q por 11 meses todos os dias eu sinto tua falta q chega apertar o coração, q ne faz chorar por n te ter por perto. Lindona, nesses 29 dias q eu passei cntg, foram os 29 dias mais felizes q eu ja tive, eu fui genuinamente feliz em te esperar sentiadinha na area  p lher dar beijoquinhas, esperar voce de banho tomado p vc chegar e dizer ''ta cheirosa'' e eu ''sim ne, eu tomo banho''. Cada dia q se passa tu me deixa mais apaixonada ainda por ti, eu fico relembrando  todos os mementinhos juntas e fico com um sorrisao besta na cara, vc n sabe a falta q eu sinto de dormir cntg do meu lado, de fzr carinho em ti, de receber carinho, pq teu carinho e o melhor do mundo. Eu sou completamente boiola por ti, eu cheguei em pf e fiquei contando p mae tudo oq fizemos igual uma crianca feliz. Tua companhia me dfaz extremamente bem, tu sabe q eu largaria tudo e todos p viver uma vidinha calma e simples do teu lado. Espero passar o resto da minha vida, meus ultimos segundos tendop a visao da sua cara linda na minha frente, eu te amo, feliz 7 meses🤍</div>
+        
+        <div class="elements">
+            <div class="heart"></div>
+            <footer>
+                <div class="boton">
+                    <button><a href="index2.html"><span>clica neu</span></a></button>
+                </div>
+            </footer>
+        </div>
+       
+    </div>
+    
+</body>
+</html>
