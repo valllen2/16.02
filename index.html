@@ -1,134 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        .back {
-
-            position: fixed;
-            padding: 0;
-            margin: 0;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            animation-name: backdiv;
-            animation-duration: 3500ms;
-            animation-iteration-count: infinite;
-            height: 100vh;
-        }
-
-        .heart {
-            position: absolute;
-            margin: auto;
-            top: 170px;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgb(184, 41, 141);
-            height: 150px;
-            width: 150px;
-            transform: rotate(-45deg);
-            animation-name: beat;
-            animation-duration: 3500ms;
-            animation-iteration-count: infinite;
-        }
-
-        .heart:after {
-            background-color: rgb(165, 28, 119);
-            content: "";
-            border-radius: 50%;
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            top: 0;
-            left: 80px;
-        }
-
-        .heart:before {
-            background-color: rgb(167, 22, 111);
-            content: "";
-            border-radius: 50%;
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            top: -80px;
-            left: 0;
-        }
-
-        @keyframes backdiv {
-            50% {
-                background: #000000fd;
-            }
-        }
-
-        @keyframes beat {
-            0% {
-                transform: scale(1) rotate(-45deg);
-            }
-
-            50% {
-                transform: scale(0.6) rotate(-45deg);
-            }
-        }
-
-        .bday {
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(102, 101, 101, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-            font-size: 15px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 600;
-            color: #ffffff;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: #570701;
-        }
-
-        button {
-            background-color: rgb(90, 6, 6);
-            display: block; 
-            margin: 20px auto; 
-            padding: 10px 20px; 
-            color: white; 
-            border: none;
-            margin-top: 70vh;
-             
-        }
-        a{
-            color: rgb(255, 255, 255);
-            font-weight: 20px;
-            text-decoration: none;
-        }
-
-        .elements {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-           
-        }
-    </style>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
-    <title>girafsol</title>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário, Meu Amor 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="back">
-        <div class="bday">Amorequinho<br>7 meses togethers amoreco, nem parece q por 11 meses todos os dias eu sinto tua falta q chega apertar o coração, q ne faz chorar por n te ter por perto. Lindona, nesses 29 dias q eu passei cntg, foram os 29 dias mais felizes q eu ja tive, eu fui genuinamente feliz em te esperar sentiadinha na area  p lher dar beijoquinhas, esperar voce de banho tomado p vc chegar e dizer ''ta cheirosa'' e eu ''sim ne, eu tomo banho''. Cada dia q se passa tu me deixa mais apaixonada ainda por ti, eu fico relembrando  todos os mementinhos juntas e fico com um sorrisao besta na cara, vc n sabe a falta q eu sinto de dormir cntg do meu lado, de fzr carinho em ti, de receber carinho, pq teu carinho e o melhor do mundo. Eu sou completamente boiola por ti, eu cheguei em pf e fiquei contando p mae tudo oq fizemos igual uma crianca feliz. Tua companhia me dfaz extremamente bem, tu sabe q eu largaria tudo e todos p viver uma vidinha calma e simples do teu lado. Espero passar o resto da minha vida, meus ultimos segundos tendop a visao da sua cara linda na minha frente, eu te amo, feliz 7 meses🤍</div>
-        
-        <div class="elements">
-            <div class="heart"></div>
-            <footer>
-                <div class="boton">
-                    <button><a href="index2.html"><span>clica neu</span></a></button>
-                </div>
-            </footer>
-        </div>
-       
+
+  <!-- Música de fundo -->
+  <audio autoplay src="pelo tempo que durar.mp3" autoplay></audio>
+
+
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop id="video-background">
+    <source src="WhatsApp Video 2025-04-26 at 22.54.34.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <!-- Corações animados -->
+  <canvas id="coracoes"></canvas>
+
+  <!-- Conteúdo principal -->
+  <div class="conteudo">
+    <h1>Feliz Aniversário Amoreco 🎉❤️</h1>
+    <p>Hoje é o seu dia, e eu fiz algo legal pra voce</p>
+    <button onclick="mostrarCartas()">Textinhos💌</button>
+
+    <div class="cartas" id="cartas">
+      <div class="carta">Linda, hoje voce q ta fazendo anibersario, mas quem deveria receber os parabens é sua mae por colocar uma gatinha desse nivel no mundo😏, brincadeira eu te amo ta?!</div>
+      <div class="carta">Eu me apaixono todos os dias um pouco mais por ti, eu n consigo colocar em palabras o quanto tu ilumina cada coisa ao teu redor, teu jeito, teu sorriso, tua risada, os teus olhos, o seu bico com sua cara de tadinha da silva q da vontade de apertar...</div>
+      <div class="carta">Se eu paro pra pensar no futuro e olhar pra frente, eu so consigo imaginar uma vidinha cntg, um lar, um apzinho com plantinhas e gatos com tua risada ecoando e ocupando o espaco intewiro, eu so consigo pensar nos finais de semana e o quao de preguicinha na cama a gnt poderia ficar e o quao gostosa vai ser essa vida pra poder passar todos os teus proximos aniversarios juntinha cntg na nossa casinha. Hj e seu nivers, e vc tenq comemorar todos os teus anos sendo a pessoa q tu é. Feliz niver lindoca, eu te amo muito mais q ontem e muito menos doq amanha muahjahaha, eu te amo amoreco, serio.</div>
     </div>
-    
+
+    <div class="carrossel">
+      <img src="ana1.jpg" class="slide" style="display:block;">
+      <img src="ana2.jpg" class="slide">
+      <img src="ana3.jpg" class="slide">
+      <button class="nav" onclick="mudarSlide(-1)">⬅</button>
+      <button class="nav" onclick="mudarSlide(1)">➡</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
